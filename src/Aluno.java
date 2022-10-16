@@ -5,6 +5,7 @@ public class Aluno {
     private String nomeCompleto;
 
     private Situacao situacao;
+    
 
     public int getCodigo() {
         return codigo;
@@ -18,7 +19,7 @@ public class Aluno {
         return nomeCompleto;
     }
 
-    public void setnnomeCompleto(String nomeCompleto) {
+    public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
     }
 

@@ -28,5 +28,41 @@ public class DiarioDeClasse {
         indiceDaTurma++;
     }
 
-    
+    public double calcularMedia(Aluno alunos) {
+
+        double media = 0.0;
+
+        for (Aluno aluno : turma) {
+            if(aluno != null) {
+                media = (aluno.getSituacao().getPrimeiraNota() +
+                        aluno.getSituacao().getSegundaNota() +
+                        aluno.getSituacao().getTerceiraNota()) / 3;
+
+                aluno.getSituacao().setMedia(media);
+             
+                if(media >= 7) {
+                    aluno.getSituacao().setStatus('A');
+                }else {
+                    aluno.getSituacao().setStatus('R');
+                }       
+            }
+        }
+        return media;
+    }
+
+    public Aluno[] listarAlunos(Aluno[] turma) {
+        
+        Aluno[] alunosListados = new Aluno[indiceDaTurma];
+
+        int i = 0;
+
+        for (Aluno aluno : turma) {
+            if(aluno != null){
+                alunosListados[i] = aluno;
+                i++;
+            }
+        }
+        return alunosListados;
+    }
+
 }
