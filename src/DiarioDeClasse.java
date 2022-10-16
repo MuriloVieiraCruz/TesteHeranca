@@ -28,6 +28,10 @@ public class DiarioDeClasse {
         indiceDaTurma++;
     }
 
+    public void cadastrarAluno() {
+
+    }
+
     public double calcularMedia(Aluno alunos) {
 
         double media = 0.0;
